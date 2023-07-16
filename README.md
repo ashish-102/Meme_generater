@@ -14,7 +14,7 @@ Welcome to the Meme Generator Web App! This web application allows users to crea
 
 1. Clone this repository to your local machine.
    ```
-   git clone https://github.com/ashish-102/meme-generator-web-app.git
+   git clone [https://github.com/ashish-102/meme-generator-web-app.git](https://github.com/ashish-102/Meme_generater.git)
    ```
 
 2. Navigate to the project directory.
