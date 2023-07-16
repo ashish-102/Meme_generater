@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Welcome to the Meme Generator Web App! This web application allows users to create custom memes using a collection of pre-existing templates or by uploading their own images. It is built using Django, Python, HTML Canvas, CSS, JavaScript, and SQLite as the database.
+Welcome to the Meme Generator Web App! This web application allows users to create custom memes by uploading their own images. It is built using Django, Python, HTML Canvas, CSS, JavaScript, and SQLite as the database.
 
 ## Features
 
@@ -45,9 +45,9 @@ Welcome to the Meme Generator Web App! This web application allows users to crea
 
 2. **Create Meme**: Select a meme template or upload your own image. Use the HTML canvas, CSS, and JavaScript functionality to add text and customize the appearance of your meme.
 
-3. **Save Meme**: Once you are satisfied with your meme, click the "Save" button to store it in the SQLite database.
+3. **Save Meme**: Once you are satisfied with your meme, click the "Export" button to store it in the SQLite database.
 
-4. **View Memes**: Navigate to the "My Memes" page to view all the memes you have created.
+4. **View Memes**: Navigate to the "Downloader" page to view all the memes you have created.
 
 ## Technologies Used
 
