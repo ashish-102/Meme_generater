@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+<title>Index page - create you own memes</title>
+{% endblock title %}
+
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/basics.css' %}">
+{% endblock css %}
+
+{% block main %}
+<main>
+   {% include 'navbar.html' %}
+
+    <div class="container-body">
+        <div class="leftside">
+            Create your own memes
+            <a href="{% url 'editor' %}"><button>Start creating a meme</button></a>
+        </div>
+
+        <div class="rightside">
+            <img src="{% static 'images/thumbnail.png' %}" alt="">
+        </div>
+    </div>
+</main>
+{% endblock main %}
+
+
+
+{% block js %}{% endblock js %}

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{% static 'images/thumbnail.png' %}" type="image/icon">
+    
+    {% block title %}{% endblock title %}
+
+    {% block css %}{% endblock css %}
+</head>
+<body>
+    
+    {% block main %}{% endblock main %}
+
+    {% block js %}{% endblock js %}
+</body>
+</html>

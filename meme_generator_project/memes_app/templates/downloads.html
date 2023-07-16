@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+<title>Meme is ready for download</title>
+{% endblock title %}
+
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/basics.css' %}">
+<link rel="stylesheet" href="{% static 'css/download.css' %}">
+{% endblock css %}
+
+{% block main %}
+<main>
+   {% include 'navbar.html' %}
+   <div class="memeimages"> 
+   {% for meme in allimage %}
+   <div class="singleimg">
+       <img src="/media/{{ meme.memeImage }}" alt="" height="350">
+
+       <div class="btn-grp">
+            <a href="/media/{{ meme.memeImage }}" download><button class="btn">Download</button></a>
+            <a href="{% url 'delete' meme.id %}"><button class="del">delete</button></a>
+        </div>
+   </div>
+   {% endfor %}
+    </div>
+</main>
+{% endblock main %}
+
+
+
+{% block js %}{% endblock js %}

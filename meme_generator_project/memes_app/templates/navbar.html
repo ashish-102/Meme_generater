@@ -1,0 +1,14 @@
+<nav class="navbar">
+    <ul>
+        <li class="brand">memer.com</li>
+        <div class="auth-btn">
+            {% if not user.is_authenticated %}
+                <li> <a href="{% url 'signin' %}"><button>signup or login</button></a></li>
+            {% else %}
+                <li> <a href="{% url 'index' %}"><button>Home</button></a></li>
+                <li> <a href="{% url 'downloader' %}"><button>downloader</button></a></li>
+                <li> <a href="{% url 'logout' %}"><button>logout</button></a></li>
+            {% endif %}
+        </div>
+    </ul>
+</nav>

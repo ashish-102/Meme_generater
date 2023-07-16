@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+<title>User login - Already have account</title>
+{% endblock title %}
+
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/signup.css' %}">
+{% endblock css %}
+
+{% block main %}
+<main>  
+
+    <div class="signforms">
+        <h2>Sign up</h2>
+        <span class="close"><a href="/"><img src="{% static 'images/close.png' %}" alt="" height="32px"></a></span>
+        <form action="{% url 'signup' %}" method="POST" novalidate class="forms">
+            {% csrf_token %}
+            {% for fm in signupform %}
+            <p>
+                <label >{{ fm.label }}</label>
+                {{ fm }}
+            </p>
+    
+                {{ fm.errors }}
+          
+            {% endfor %}
+
+            <div class="btn-sub">
+                <input type="submit" value="Signup">
+            </div>
+        </form>
+
+        <div class="hr">
+        </div>
+
+        <div class="register">
+            I have Account - <a href="{% url 'signin' %}">Login</a> 
+        </div>
+
+    </div>
+</main>
+{% endblock main %}
+
+
+{% block js %}
+{% endblock js %}

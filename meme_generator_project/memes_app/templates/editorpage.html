@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+<title>Editor page - create you own memes</title>
+{% endblock title %}
+
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/basics.css' %}">
+<link rel="stylesheet" href="{% static 'css/editorpage.css' %}">
+{% endblock css %}
+
+{% block main %}
+<main>
+   {% include 'navbar.html' %}
+
+   <div class="edit-panel">
+      <div class="right-panel">
+         
+         <form action="{% url 'editor' %}" method="POST" id="memeform" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="file-upld">
+               <input type="file" name="" id="up-img" accept="image/png, image/jpeg">
+         
+            </div>
+
+            <div class="text-box">
+               <label for="">Top Text box</label>
+               <input type="text" name="" id="text-1" autocomplete="off">
+               <div><span class="txt-col">Text color </span><input type="color" name="" id="color1" ></div>
+            </div>
+
+            <div class="text-box">
+               <label for="">Center Text box</label>
+               <input type="text" name="" id="text-2" autocomplete="off">
+               <div><span class="txt-col">Text color </span><input type="color" name="" id="color2" ></div>
+            </div>
+
+            <div class="text-box">
+               <label for="">Bottom Text box</label>
+               <input type="text" name="" id="text-3" autocomplete="off">
+               <div><span class="txt-col">Text color </span><input type="color" name="" id="color3" ></div>
+            </div>
+
+            <input type="hidden" id="imageData" name="imageData" value="" >
+            <div class="export">
+               <a href="" onclick="save()"><button type="submit">Export <img src="{% static 'images/upload.png' %}" alt="" height="25px"></button></a>
+            </div>
+         </form>
+      </div>
+
+      <div class="left-panel">
+         <canvas id="canvas-page">
+
+         </canvas>
+      </div>
+   </div>
+</main>
+{% endblock main %}
+
+
+
+{% block js %}
+<script src="{% static 'Js/meme-page.js' %}"></script>
+{% endblock js %}

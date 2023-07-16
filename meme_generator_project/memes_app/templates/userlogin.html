@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+<title>User login - Already have account</title>
+{% endblock title %}
+
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/login.css' %}">
+{% endblock css %}
+
+{% block main %}
+<main>  
+    {% if messages %}
+        {% for mgs in messages %}
+            <p class="text">{{ mgs }}</p>
+        {% endfor %}
+    {% endif %}
+
+    <div class="loginforms">
+        <h2>Login</h2>
+        <span class="close"><a href="/"><img src="{% static 'images/close.png' %}" alt="" height="32px"></a></span>
+        <form action="{% url 'signin' %}" method="POST" class="forms">
+            {% csrf_token %}
+
+            {{ loginform.as_p }}
+            
+            <span class="show-pass">
+                <input type="checkbox" onclick="ShowPass()"> <span>Show Password</span>
+            </span>
+
+            <div class="btn-sub">
+                <input type="submit" value="Login">
+            </div>
+        </form>
+        <div class="hr">
+        </div>
+        <div class="register">
+            Doesn't have Account - <a href="{% url 'signup' %}">Register here</a> 
+        </div>
+    </div>
+</main>
+{% endblock main %}
+
+
+{% block js %}
+<script>
+function ShowPass() {
+    var x = document.getElementById("id_password");
+    if (x.type === "password") {
+      x.type = "text";
+    } else {
+      x.type = "password";
+    }
+  }
+
+</script>
+{% endblock js %}

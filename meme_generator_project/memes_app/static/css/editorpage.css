@@ -1,0 +1,113 @@
+.edit-panel{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.right-panel{
+    box-sizing: border-box;
+    height: 34rem;
+    width: 25%;
+    display: flex;
+}
+
+.right-panel form{
+    padding: 0px 25px;
+    flex-wrap: wrap;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-around;
+    color: white;
+    box-sizing: border-box;
+    background-color: #041d14;
+    border-top: 3px solid rgb(184, 255, 184);
+    border-top-right-radius: 34px;
+}
+
+input::file-selector-button {
+    font-family: cursive;
+    font-weight: bold;
+    color: rgb(10, 66, 33);
+    padding: 0.5em;
+    border: thin solid rgb(102, 241, 102);
+    border-radius: 15px;
+}
+
+
+.text-box{
+    display: flex;
+    flex-direction: column;
+    padding: 3px;
+}
+
+.text-box input[type=text]{
+    border: 0;
+    border-radius: 20px;
+    padding: 4px;
+    outline: none;
+    font-size: 20px;
+    border: 1px solid rgb(102, 241, 102);
+    background-color: rgb(213, 255, 223);
+}
+
+label{
+    font-family: cursive;
+    padding: 4px 0px;
+}
+
+.txt-col{
+    font-size: 18px;
+    font-family: cursive;
+}
+
+.text-box input[type=color]{
+    align-self: self-start;
+    margin-top: 5px;
+    padding: 0px;
+    width: 40px ;
+    height: 25px;
+    background-color: #041d14;
+    /* border: px solid rgb(255, 255, 255); */
+}
+
+.export{
+    padding: 5px 7px;
+    background-color: rgb(141, 255, 217);
+    border-radius: 16px;
+    border: 1px solid black;
+}
+.export a{
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.export a button{
+    background-color: rgb(141, 255, 217);
+    border: 0px;
+    font-size: 20px;
+    font-family: cursive;
+    cursor: pointer;
+    width: 100%;
+}
+
+.left-panel{
+    width: 100%;
+    margin: 3px 10px;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+#canvas-page{
+    box-sizing: border-box;
+    width: 55%;
+    height: 100%;
+    border: 1px solid rgb(4, 39, 10);
+    background-color: whitesmoke;
+    flex-wrap: wrap;
+    box-sizing: border-box  ;
+}
