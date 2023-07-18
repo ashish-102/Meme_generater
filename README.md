@@ -19,7 +19,7 @@ Welcome to the Meme Generator Web App! This web application allows users to crea
 
 2. Navigate to the project directory.
    ```
-   cd Meme_generater
+   cd Meme_generator
    ```
 
 3. Install the required dependencies.
